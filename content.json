@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Jorge Talló - Product & Sales Leader",
+    "title": "Jorge Talló - Product & Sales",
     "version": "v0.2"
   },
   "hero": {
@@ -27,7 +27,7 @@
         "Technical Sales & Customer Success", 
         "B2B SaaS & Enterprise Solutions"
       ],
-      "achievement": "Achievement Unlocked: \"Bridge Builder\" - Successfully connecting complex tech with market demands since 2015."
+      "achievement": "Achievement Unlocked: \"Bridge Builder\" - Successfully connecting complex tech with market demands since 2020."
     },
     "projects": {
       "icon": "🕹️",
@@ -35,22 +35,22 @@
       "content": "Portfolio of completed levels demonstrating mastery across multiple game genres (business domains).",
       "items": [
         {
-          "title": "🎯 SALESFORCE OPTIMIZER",
-          "description": "AI-Powered Pipeline Manager",
-          "link": "https://github.com/jorge/salesforce-optimizer",
-          "linkText": "→ VIEW CODE"
+          "title": "🎯 CO-FOUNDER",
+          "description": "BENFET - Full-stack modular renewable energy and water solutions",
+          "link": "https://benfetprojects.com",
+          "linkText": "→ VIEW BENFET"
         },
         {
-          "title": "📊 MARKET INTEL DASH",
-          "description": "Real-time Competitive Analysis",
-          "link": "https://market-intel-demo.vercel.app",
-          "linkText": "→ PLAY DEMO"
+          "title": "📊 CO-FOUNDER",
+          "description": "A climate-tech startup helping decarbonise business",
+          "link": "https://agoraclimate.com",
+          "linkText": "→ VIEW AGORA"
         },
         {
-          "title": "🤖 PMF CALCULATOR", 
-          "description": "Product-Market Fit Assessment",
-          "link": "https://pmf-calculator.jorge.dev",
-          "linkText": "→ TRY NOW"
+          "title": "🤖 CO-FOUNDER", 
+          "description": "E-commerce & physical sustainable lifestyle store",
+          "link": "https://terrazerostore.com",
+          "linkText": "→ VIEW AGORA"
         }
       ]
     },
@@ -59,34 +59,34 @@
       "title": "TECH.ARSENAL",
       "content": "Professional equipment optimized for maximum performance in modern business battlegrounds.",
       "items": [
-        {"name": "GITHUB", "category": "VERSION CTRL"},
-        {"name": "VERCEL", "category": "DEPLOYMENT"},
-        {"name": "VS CODE", "category": "DEV ENGINE"},
-        {"name": "FIGMA", "category": "DESIGN LAB"},
-        {"name": "NOTION", "category": "STRATEGY HQ"},
-        {"name": "SALESFORCE", "category": "CRM CORE"},
-        {"name": "PYTHON", "category": "DATA SCI"},
-        {"name": "REACT", "category": "FRONTEND"}
+        {"name": "EXCEL", "category": "ANALYSIS & FORECASTING"},
+        {"name": "SQL", "category": "DATA MANAGEMENT"},
+        {"name": "PYTHON", "category": "BEGINNER"},
+        {"name": "Bsc Economics", "category": "University of Warwick"},
+        {"name": "ENGLISH", "category": "FLUENT"},
+        {"name": "SPANISH", "category": "NATIVE"},
+        {"name": "CATALAN", "category": "NATIVE"},
+        {"name": "PORTUGUESE", "category": "BEGINNER"}
       ]
     },
     "thoughts": {
       "icon": "💾",
       "title": "BRAIN.DATA", 
-      "content": "Archived thoughts and strategic insights on product development, sales optimization, and the future of human-AI collaboration.",
+      "content": "Archived thoughts on technology, the future of human-AI collaboration, my interests and more.",
       "posts": [
         {
           "title": "AI IN SALES: GAME CHANGER",
-          "date": "DEC 2024 • 8-BIT READ",
+          "date": "AUG 2025 • 0 MIN READ",
           "excerpt": "How machine learning is reshaping customer acquisition patterns and why traditional sales funnels are becoming obsolete..."
         },
         {
-          "title": "PRODUCT-LED GROWTH UNLOCKED",
-          "date": "NOV 2024 • BOSS LEVEL READ", 
-          "excerpt": "Advanced strategies for building products that sell themselves, featuring case studies from successful PLG transformations..."
+          "title": "UI IN THE AGE OF AI",
+          "date": "AUG 2025 • 0 MIN READ", 
+          "excerpt": "Are we considering how people interact with technology and ultimately AI in the fast evolving tech world?"
         },
         {
           "title": "THE FUTURE OF B2B SALES",
-          "date": "OCT 2024 • EXPERT MODE",
+          "date": "AUG 2025 • 0 MIN READ",
           "excerpt": "Predictions on how AI assistants will transform enterprise sales processes over the next 24 months..."
         }
       ],
@@ -98,9 +98,9 @@
     "title": "CONTINUE? Y/N",
     "subtitle": "READY TO START CO-OP MODE?", 
     "links": [
-      {"icon": "📧", "label": "EMAIL", "href": "mailto:jorge.tallo@example.com"},
+      {"icon": "📧", "label": "EMAIL", "href": "mailto:jorgetallosoria@gmail.com"},
       {"icon": "💼", "label": "LINKEDIN", "href": "https://linkedin.com/in/jorgetallo"},
-      {"icon": "🐙", "label": "GITHUB", "href": "https://github.com/jorgetallo"},
+      {"icon": "🐙", "label": "GITHUB", "href": "https://github.com/jorgetallosoria"},
       {"icon": "📄", "label": "RESUME.PDF", "href": "https://jorge-resume.s3.amazonaws.com/jorge-tallo-resume.pdf"}
     ]
   }
