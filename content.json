@@ -62,7 +62,7 @@
         {"name": "EXCEL", "category": "ANALYSIS & FORECASTING"},
         {"name": "SQL", "category": "DATA MANAGEMENT"},
         {"name": "PYTHON", "category": "BEGINNER"},
-        {"name": "BSC ECONOMICS", "category": "UNIVERSITY OF WARWICK"},
+        {"name": "Bsc Economics", "category": "University of Warwick"},
         {"name": "ENGLISH", "category": "FLUENT"},
         {"name": "SPANISH", "category": "NATIVE"},
         {"name": "CATALAN", "category": "NATIVE"},
@@ -194,6 +194,7 @@
       "featured": false
     }
   ]
+}
 }
 } PRODUCT & SALES STRATEGIST<br>SPECIALIZING IN HIGH-SCORE REVENUE GENERATION<br>READY FOR NEXT BOSS BATTLE",
     "cta": "INSERT COIN"
