@@ -99,7 +99,7 @@
     "subtitle": "READY TO START CO-OP MODE?", 
     "links": [
       {"icon": "📧", "label": "EMAIL", "href": "mailto:jorgetallosoria@gmail.com"},
-      {"icon": "💼", "label": "LINKEDIN", "href": "https://linkedin.com/in/jorgetallo"},
+      {"icon": "💼", "label": "LINKEDIN", "href": "https://www.linkedin.com/in/jtallosoria/"},
       {"icon": "🐙", "label": "GITHUB", "href": "https://github.com/jorgetallosoria"},
       {"icon": "📄", "label": "RESUME.PDF", "href": "https://jorge-resume.s3.amazonaws.com/jorge-tallo-resume.pdf"}
     ]
