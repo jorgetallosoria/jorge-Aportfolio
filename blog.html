@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Talló - All Articles | Brain.Data Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: 
+                radial-gradient(ellipse at center, #2d1b69 0%, #0f0f23 70%),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 0, 255, 0.03) 2px,
+                    rgba(255, 0, 255, 0.03) 4px
+                );
+            color: #00ff00;
+            font-family: 'Orbitron', monospace;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 0, 0.03) 2px,
+                rgba(0, 255, 0, 0.03) 4px
+            );
+            pointer-events: none;
+            z-index: 1000;
+            animation: scanlineMove 0.1s linear infinite;
+        }
+
+        @keyframes scanlineMove {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(4px); }
+        }
+
+        .crt-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .grid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 0, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 0, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -2;
+            animation: gridFlicker 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes gridFlicker {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+            100% { opacity: 0.3; }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, #000000 0%, #1a0033 100%);
+            border-bottom: 3px solid #00ff00;
+            border-top: 3px solid #ff00ff;
+            z-index: 998;
+            padding: 1rem 2rem;
+            font-family: 'Press Start 2P', monospace;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            color: #ffff00;
+            text-shadow: 
+                2px 2px 0 #ff0000,
+                0 0 10px #ffff00;
+            animation: logoFlash 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        @keyframes logoFlash {
+            0%, 90%, 100% { color: #ffff00; }
+            5%, 85% { color: #ff00ff; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.7rem;
+        }
+
+        .nav-links a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            border: 2px solid #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+            color: #ffff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .back-btn {
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(255, 0, 255, 0.3));
+            color: #ffff00;
+            text-decoration: none;
+            border: 2px solid #ff0000;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.5), rgba(0, 255, 255, 0.5));
+            border-color: #00ffff;
+            transform: scale(1.05);
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blog-header {
+            text-align: center;
+            padding: 4rem 0;
+            margin-bottom: 4rem;
+            background: 
+                linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1)),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(0, 255, 0, 0.05) 10px,
+                    rgba(0, 255, 0, 0.05) 20px
+                );
+            border: 3px solid #ff00ff;
+        }
+
+        .blog-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff00ff;
+            text-shadow: 
+                3px 3px 0 #00ffff,
+                6px 6px 0 #ffff00,
+                0 0 30px #ff00ff;
+            animation: titlePulse 2s ease-in-out infinite alternate;
+            letter-spacing: 2px;
+        }
+
+        @keyframes titlePulse {
+            from { 
+                transform: scale(1);
+                filter: hue-rotate(0deg);
+            }
+            to { 
+                transform: scale(1.02);
+                filter: hue-rotate(20deg);
+            }
+        }
+
+        .blog-header .subtitle {
+            font-size: 0.8rem;
+            color: #00ffff;
+            font-family: 'Press Start 2P', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .article-card {
+            background: 
+                linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 0, 51, 0.8)),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 4px,
+                    rgba(0, 255, 0, 0.1) 4px,
+                    rgba(0, 255, 0, 0.1) 8px
+                );
+            border: 3px solid #00ff00;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
+            z-index: -1;
+            animation: borderFlash 2s linear infinite;
+        }
+
+        @keyframes borderFlash {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 30px rgba(0, 255, 0, 0.3),
+                inset 0 0 20px rgba(255, 0, 255, 0.1);
+            border-color: #ff00ff;
+        }
+
+        .article-tag {
+            background: linear-gradient(45deg, #ff0000, #ff00ff);
+            color: #ffffff;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.5rem;
+            font-family: 'Press Start 2P', monospace;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .article-title {
+            color: #ffff00;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: 'Press Start 2P', monospace;
+            text-shadow: 2px 2px 0 #ff00ff;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            color: #ff00ff;
+            font-size: 0.6rem;
+            margin-bottom: 1rem;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .article-excerpt {
+            color: #00ffff;
+            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .article-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.6rem;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .stat {
+            color: #00ff00;
+        }
+
+        .stat-value {
+            color: #ffff00;
+        }
+
+        .read-article-btn {
+            background: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+            color: #ffffff;
+            text-decoration: none;
+            border: 2px solid #00ffff;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            display: inline-block;
+        }
+
+        .read-article-btn:hover {
+            background: linear-gradient(45deg, rgba(255, 0, 255, 0.5), rgba(0, 255, 255, 0.5));
+            border-color: #ff00ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+
+        .loading {
+            color: #ff00ff;
+            text-align: center;
+            font-family: 'Press Start 2P', monospace;
+            padding: 2rem;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-nav {
+                display: block;
+                background: none;
+                border: 2px solid #00ff00;
+                color: #00ff00;
+                font-size: 1rem;
+                font-family: 'Press Start 2P', monospace;
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+            
+            .blog-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-effect"></div>
+    <div class="grid-background"></div>
+
+    <div class="loading" id="loading">LOADING BRAIN.DATA ARCHIVE...</div>
+
+    <header style="display: none;" id="header">
+        <nav>
+            <a href="index.html" class="logo">JORGE.EXE v0.2</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="blog.html">THOUGHTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← BACK TO MAIN</a>
+            <button class="mobile-nav">MENU</button>
+        </nav>
+    </header>
+
+    <main style="display: none;" id="main">
+        <section class="blog-header">
+            <h1>💾 BRAIN.DATA ARCHIVE</h1>
+            <div class="subtitle">ALL NEURAL DOWNLOADS • STRATEGIC INSIGHTS • FUTURE PREDICTIONS</div>
+        </section>
+
+        <div class="articles-grid" id="articles-grid">
+            <!-- Articles will be populated from JSON -->
+        </div>
+    </main>
+
+    <script>
+        // Function to load all articles from JSON
+        async function loadAllArticles() {
+            try {
+                const response = await fetch('./content.json');
+                const content = await response.json();
+                return content.allArticles || [];
+            } catch (error) {
+                console.log('Could not load content.json, using sample articles');
+                return getSampleArticles();
+            }
+        }
+
+        // Sample articles for testing
+        function getSampleArticles() {
+            return [
+                {
+                    "tag": "AI & SALES",
+                    "title": "AI IN SALES: GAME CHANGER",
+                    "date": "DEC 2024",
+                    "readTime": "8-BIT READ",
+                    "excerpt": "How machine learning is reshaping customer acquisition patterns and why traditional sales funnels are becoming obsolete. Deep dive into implementation strategies and real-world case studies.",
+                    "views": "2.3K",
+                    "likes": "147",
+                    "link": "#",
+                    "featured": true
+                },
+                {
+                    "tag": "PRODUCT STRATEGY",
+                    "title": "PRODUCT-LED GROWTH UNLOCKED",
+                    "date": "NOV 2024",
+                    "readTime": "BOSS LEVEL READ",
+                    "excerpt": "Advanced strategies for building products that sell themselves, featuring case studies from successful PLG transformations at scale. Framework included for immediate implementation.",
+                    "views": "1.8K",
+                    "likes": "203",
+                    "link": "#",
+                    "featured": true
+                },
+                {
+                    "tag": "FUTURE TECH",
+                    "title": "THE FUTURE OF B2B SALES",
+                    "date": "OCT 2024",
+                    "readTime": "EXPERT MODE",
+                    "excerpt": "Predictions on how AI assistants will transform enterprise sales processes over the next 24 months. What leaders need to prepare for now.",
+                    "views": "3.1K",
+                    "likes": "289",
+                    "link": "#",
+                    "featured": true
+                },
+                {
+                    "tag": "STARTUPS",
+                    "title": "ZERO TO PMF IN 90 DAYS",
+                    "date": "SEP 2024",
+                    "readTime": "SPEEDRUN GUIDE",
+                    "excerpt": "Rapid product-market fit discovery framework tested across 15+ startups. Step-by-step playbook with templates and metrics that actually matter.",
+                    "views": "4.2K",
+                    "likes": "378",
+                    "link": "#",
+                    "featured": false
+                },
+                {
+                    "tag": "LEADERSHIP",
+                    "title": "BUILDING TEAMS FOR AI SCALE",
+                    "date": "AUG 2024",
+                    "readTime": "STRATEGY GUIDE",
+                    "excerpt": "How to structure product and sales teams for exponential technology adoption. Organizational design patterns from successful AI-first companies.",
+                    "views": "1.9K",
+                    "likes": "156",
+                    "link": "#",
+                    "featured": false
+                },
+                {
+                    "tag": "REVENUE OPS",
+                    "title": "REVENUE INTELLIGENCE 3.0",
+                    "date": "JUL 2024",
+                    "readTime": "ADVANCED TECH",
+                    "excerpt": "Next-generation revenue operations using predictive analytics and automation. Implementation guide for enterprise sales teams with 50+ reps.",
+                    "views": "2.7K",
+                    "likes": "234",
+                    "link": "#",
+                    "featured": false
+                },
+                {
+                    "tag": "MARKET ANALYSIS",
+                    "title": "THE SAAS SHAKEOUT OF 2024",
+                    "date": "JUN 2024",
+                    "readTime": "INDUSTRY REPORT",
+                    "excerpt": "Which SaaS companies will survive the market correction and why. Analysis of 100+ public SaaS companies and their positioning for the next wave.",
+                    "views": "5.8K",
+                    "likes": "423",
+                    "link": "#",
+                    "featured": false
+                },
+                {
+                    "tag": "AUTOMATION",
+                    "title": "SALES AUTOMATION THAT WORKS",
+                    "date": "MAY 2024",
+                    "readTime": "PRACTICAL GUIDE",
+                    "excerpt": "Automation strategies that increase conversion without losing the human touch. Tools, workflows, and metrics that drive real results.",
+                    "views": "3.4K",
+                    "likes": "287",
+                    "link": "#",
+                    "featured": false
+                }
+            ];
+        }
+
+        // Function to populate articles on the page
+        function populateArticles(articles) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+
+            articles.forEach(article => {
+                const card = document.createElement('div');
+                card.className = 'article-card';
+                
+                card.innerHTML = `
+                    <div class="article-tag">${article.tag}</div>
+                    <div class="article-title">${article.title}</div>
+                    <div class="article-meta">${article.date} • ${article.readTime}</div>
+                    <div class="article-excerpt">${article.excerpt}</div>
+                    <div class="article-stats">
+                        <span class="stat">VIEWS: <span class="stat-value">${article.views}</span></span>
+                        <span class="stat">LIKES: <span class="stat-value">${article.likes}</span></span>
+                    </div>
+                    <a href="${article.link}" class="read-article-btn">→ READ ARTICLE</a>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Initialize the blog page
+        async function init() {
+            const articles = await loadAllArticles();
+            populateArticles(articles);
+            
+            // Hide loading and show content
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('header').style.display = 'block';
+            document.getElementById('main').style.display = 'block';
+        }
+
+        // Screen effects (same as main page)
+        setInterval(() => {
+            if (Math.random() < 0.002) {
+                document.body.style.filter = 'brightness(1.2) contrast(1.1)';
+                setTimeout(() => {
+                    document.body.style.filter = 'none';
+                }, 30);
+            }
+        }, 100);
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>
