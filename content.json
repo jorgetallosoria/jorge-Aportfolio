@@ -62,7 +62,7 @@
         {"name": "EXCEL", "category": "ANALYSIS & FORECASTING"},
         {"name": "SQL", "category": "DATA MANAGEMENT"},
         {"name": "PYTHON", "category": "BEGINNER"},
-        {"name": "Bsc Economics", "category": "University of Warwick"},
+        {"name": "BSC ECONOMICS", "category": "UNIVERSITY OF WARWICK"},
         {"name": "ENGLISH", "category": "FLUENT"},
         {"name": "SPANISH", "category": "NATIVE"},
         {"name": "CATALAN", "category": "NATIVE"},
@@ -90,7 +90,7 @@
           "excerpt": "Predictions on how AI assistants will transform enterprise sales processes over the next 24 months..."
         }
       ],
-      "allPostsLink": "https://jorge-blog.vercel.app",
+      "allPostsLink": "blog.html",
       "allPostsText": "→ ACCESS ALL FILES"
     }
   },
@@ -101,6 +101,195 @@
       {"icon": "📧", "label": "EMAIL", "href": "mailto:jorgetallosoria@gmail.com"},
       {"icon": "💼", "label": "LINKEDIN", "href": "https://www.linkedin.com/in/jtallosoria/"},
       {"icon": "🐙", "label": "GITHUB", "href": "https://github.com/jorgetallosoria"},
+      {"icon": "📄", "label": "RESUME.PDF", "href": "https://jorge-resume.s3.amazonaws.com/jorge-tallo-resume.pdf"}
+    ]
+  },
+  "allArticles": [
+    {
+      "tag": "AI & SALES",
+      "title": "AI IN SALES: GAME CHANGER",
+      "date": "AUG 2025",
+      "readTime": "0 MIN READ",
+      "excerpt": "How machine learning is reshaping customer acquisition patterns and why traditional sales funnels are becoming obsolete. Deep dive into implementation strategies and real-world case studies.",
+      "views": "Coming Soon",
+      "likes": "0",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "tag": "UI/UX & AI",
+      "title": "UI IN THE AGE OF AI",
+      "date": "AUG 2025",
+      "readTime": "0 MIN READ",
+      "excerpt": "Are we considering how people interact with technology and ultimately AI in the fast evolving tech world? Exploring human-centered design principles for AI interfaces.",
+      "views": "Coming Soon",
+      "likes": "0",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "tag": "FUTURE TECH",
+      "title": "THE FUTURE OF B2B SALES",
+      "date": "AUG 2025",
+      "readTime": "0 MIN READ",
+      "excerpt": "Predictions on how AI assistants will transform enterprise sales processes over the next 24 months. What leaders need to prepare for now.",
+      "views": "Coming Soon",
+      "likes": "0",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "tag": "CLIMATE TECH",
+      "title": "BUILDING SUSTAINABLE STARTUPS",
+      "date": "COMING SOON",
+      "readTime": "DEEP DIVE",
+      "excerpt": "Lessons learned from co-founding three climate-tech companies: BENFET, Agora Climate, and Terra Zero. From renewable energy to carbon management.",
+      "views": "TBD",
+      "likes": "0",
+      "link": "#",
+      "featured": false
+    },
+    {
+      "tag": "ENTREPRENEURSHIP",
+      "title": "FROM ECONOMICS TO CLIMATE TECH",
+      "date": "COMING SOON",
+      "readTime": "ORIGIN STORY",
+      "excerpt": "My journey from studying Economics at University of Warwick to co-founding multiple climate-tech ventures. The pivotal moments and decisions.",
+      "views": "TBD",
+      "likes": "0",
+      "link": "#",
+      "featured": false
+    },
+    {
+      "tag": "PRODUCT STRATEGY",
+      "title": "MODULAR SOLUTIONS FOR COMPLEX PROBLEMS",
+      "date": "COMING SOON",
+      "readTime": "CASE STUDY",
+      "excerpt": "How we designed BENFET's modular renewable energy systems. Product thinking applied to sustainable technology solutions.",
+      "views": "TBD",
+      "likes": "0",
+      "link": "#",
+      "featured": false
+    },
+    {
+      "tag": "SALES & SUSTAINABILITY",
+      "title": "SELLING THE FUTURE: CLIMATE SOLUTIONS",
+      "date": "COMING SOON",
+      "readTime": "STRATEGY GUIDE",
+      "excerpt": "Unique challenges and opportunities in selling climate-tech solutions. How to communicate complex environmental benefits to business decision makers.",
+      "views": "TBD",
+      "likes": "0",
+      "link": "#",
+      "featured": false
+    },
+    {
+      "tag": "MULTILINGUAL BUSINESS",
+      "title": "SCALING ACROSS LANGUAGES & CULTURES",
+      "date": "COMING SOON",
+      "readTime": "GLOBAL PERSPECTIVE",
+      "excerpt": "Leveraging multilingual capabilities (Spanish, Catalan, English, Portuguese) to build international climate-tech businesses. Cultural insights for global expansion.",
+      "views": "TBD",
+      "likes": "0",
+      "link": "#",
+      "featured": false
+    }
+  ]
+}
+} PRODUCT & SALES STRATEGIST<br>SPECIALIZING IN HIGH-SCORE REVENUE GENERATION<br>READY FOR NEXT BOSS BATTLE",
+    "cta": "INSERT COIN"
+  },
+  "navigation": [
+    {"label": "ABOUT", "href": "#about"},
+    {"label": "PROJECTS", "href": "#projects"}, 
+    {"label": "TOOLS", "href": "#tools"},
+    {"label": "THOUGHTS", "href": "#thoughts"},
+    {"label": "CONTACT", "href": "#contact"}
+  ],
+  "sections": {
+    "about": {
+      "icon": "🎮",
+      "title": "PLAYER.STATS",
+      "content": "Elite player specializing in Product Strategy and Sales Mastery. Currently seeking new challenges at legendary companies pushing the boundaries of technology.",
+      "skills": [
+        "Product Strategy & Go-to-Market",
+        "Revenue Optimization & Team Leadership",
+        "Technical Sales & Customer Success", 
+        "B2B SaaS & Enterprise Solutions"
+      ],
+      "achievement": "Achievement Unlocked: \"Bridge Builder\" - Successfully connecting complex tech with market demands since 2015."
+    },
+    "projects": {
+      "icon": "🕹️",
+      "title": "GAME.LIBRARY",
+      "content": "Portfolio of completed levels demonstrating mastery across multiple game genres (business domains).",
+      "items": [
+        {
+          "title": "🎯 SALESFORCE OPTIMIZER",
+          "description": "AI-Powered Pipeline Manager",
+          "link": "https://github.com/jorge/salesforce-optimizer",
+          "linkText": "→ VIEW CODE"
+        },
+        {
+          "title": "📊 MARKET INTEL DASH",
+          "description": "Real-time Competitive Analysis",
+          "link": "https://market-intel-demo.vercel.app",
+          "linkText": "→ PLAY DEMO"
+        },
+        {
+          "title": "🤖 PMF CALCULATOR", 
+          "description": "Product-Market Fit Assessment",
+          "link": "https://pmf-calculator.jorge.dev",
+          "linkText": "→ TRY NOW"
+        }
+      ]
+    },
+    "tools": {
+      "icon": "⚙️",
+      "title": "TECH.ARSENAL",
+      "content": "Professional equipment optimized for maximum performance in modern business battlegrounds.",
+      "items": [
+        {"name": "GITHUB", "category": "VERSION CTRL"},
+        {"name": "VERCEL", "category": "DEPLOYMENT"},
+        {"name": "VS CODE", "category": "DEV ENGINE"},
+        {"name": "FIGMA", "category": "DESIGN LAB"},
+        {"name": "NOTION", "category": "STRATEGY HQ"},
+        {"name": "SALESFORCE", "category": "CRM CORE"},
+        {"name": "PYTHON", "category": "DATA SCI"},
+        {"name": "REACT", "category": "FRONTEND"}
+      ]
+    },
+    "thoughts": {
+      "icon": "💾",
+      "title": "BRAIN.DATA", 
+      "content": "Archived thoughts and strategic insights on product development, sales optimization, and the future of human-AI collaboration.",
+      "posts": [
+        {
+          "title": "AI IN SALES: GAME CHANGER",
+          "date": "DEC 2024 • 8-BIT READ",
+          "excerpt": "How machine learning is reshaping customer acquisition patterns and why traditional sales funnels are becoming obsolete..."
+        },
+        {
+          "title": "PRODUCT-LED GROWTH UNLOCKED",
+          "date": "NOV 2024 • BOSS LEVEL READ", 
+          "excerpt": "Advanced strategies for building products that sell themselves, featuring case studies from successful PLG transformations..."
+        },
+        {
+          "title": "THE FUTURE OF B2B SALES",
+          "date": "OCT 2024 • EXPERT MODE",
+          "excerpt": "Predictions on how AI assistants will transform enterprise sales processes over the next 24 months..."
+        }
+      ],
+      "allPostsLink": "blog.html",
+      "allPostsText": "→ ACCESS ALL FILES"
+    }
+  },
+  "contact": {
+    "title": "CONTINUE? Y/N",
+    "subtitle": "READY TO START CO-OP MODE?", 
+    "links": [
+      {"icon": "📧", "label": "EMAIL", "href": "mailto:jorge.tallo@example.com"},
+      {"icon": "💼", "label": "LINKEDIN", "href": "https://linkedin.com/in/jorgetallo"},
+      {"icon": "🐙", "label": "GITHUB", "href": "https://github.com/jorgetallo"},
       {"icon": "📄", "label": "RESUME.PDF", "href": "https://jorge-resume.s3.amazonaws.com/jorge-tallo-resume.pdf"}
     ]
   }
